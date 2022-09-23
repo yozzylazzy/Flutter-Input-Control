@@ -57,9 +57,6 @@ class MyApp extends StatelessWidget {
                  Container(
                      margin:EdgeInsets.only(bottom: 20),
             child :
-             SizedBox(
-               width: 500,
-              child:
               Row(
                 children:  [
                   Flexible(
@@ -110,8 +107,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               )
-            )
-        ),
+            ),
                 Container(
                   margin:EdgeInsets.only(bottom: 20),
                   child:
