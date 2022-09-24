@@ -1,6 +1,6 @@
-# input_flutter_fix
+# Form Input Control With Flutter
 
-A new Flutter project.
+TextFormField, DropdownButtonFormField, DatePicker, Button Submit and Reset
 
 ## Getting Started
 
