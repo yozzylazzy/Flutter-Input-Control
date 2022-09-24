@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 TextEditingController dateinput = TextEditingController();
+TextEditingController name = TextEditingController();
+TextEditingController phone = TextEditingController();
+TextEditingController area = TextEditingController();
+TextEditingController address = TextEditingController();
+TextEditingController city = TextEditingController();
+TextEditingController state = TextEditingController();
+TextEditingController zip = TextEditingController();
+TextEditingController email = TextEditingController();
 
+//di runAPP bisa dikasi MaterialApp() juga biar gausa bkin kelas Stateless
 void main() {
   runApp(const MyApp());
 }
@@ -57,6 +66,7 @@ class _HomeState extends State<Home> {
                 margin:EdgeInsets.only(bottom: 20) ,
                 child:
                 TextFormField(
+                  controller: name,
                   decoration: InputDecoration(
                       icon: Icon(Icons.person),
                       border: OutlineInputBorder(),
@@ -82,6 +92,7 @@ class _HomeState extends State<Home> {
                         flex: 1,
                         fit: FlexFit.tight,
                         child: TextFormField(
+                          controller: phone,
                           decoration: InputDecoration(
                             icon: Icon(Icons.phone),
                             border: OutlineInputBorder(),
@@ -149,6 +160,7 @@ class _HomeState extends State<Home> {
                 margin:EdgeInsets.only(bottom: 20),
                 child:
                 TextFormField(
+                  controller: address,
                   decoration: InputDecoration(
                       icon: Icon(Icons.location_pin),
                       border: OutlineInputBorder(),
@@ -169,6 +181,7 @@ class _HomeState extends State<Home> {
                 margin: EdgeInsets.only(left: 40, bottom: 20),
                 child:
                 TextFormField(
+                  controller: city,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: "City",
@@ -226,6 +239,7 @@ class _HomeState extends State<Home> {
                         flex: 1,
                         fit: FlexFit.tight,
                         child: new TextFormField(
+                          controller: zip,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: "Zip",
@@ -249,6 +263,7 @@ class _HomeState extends State<Home> {
               Container(
                 margin:EdgeInsets.only(bottom: 20),
                 child: TextFormField(
+                  controller: email,
                   decoration: InputDecoration(
                       icon: Icon(Icons.mail),
                       border: OutlineInputBorder(),
@@ -324,6 +339,14 @@ class _HomeState extends State<Home> {
                         ),
                         TextButton(
                           onPressed: (){
+                            dateinput.clear();
+                            name.clear();
+                            phone.clear();
+                            area.clear();
+                            address.clear();
+                            city.clear();
+                            zip.clear();
+                            email.clear();
                             print('Data Berhasil Direset');
                           }, child: Text('Reset', style: TextStyle(
                             color: Colors.white
